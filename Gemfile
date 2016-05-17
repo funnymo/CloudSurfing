@@ -18,6 +18,9 @@ gem 'toastr-rails'
 
 gem 'figaro'
 
+gem 'omniauth'
+gem 'omniauth-facebook'
+
 group :development, :test do
   gem 'byebug'
 end

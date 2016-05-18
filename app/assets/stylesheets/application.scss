@@ -187,3 +187,10 @@ input[type="checkbox"]:checked:before {
 .text-line-through {
   text-decoration: line-through;
 }
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width: 100%;
+}
+.img-responsive {
+  width: 100%;
+}

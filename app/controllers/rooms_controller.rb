@@ -16,7 +16,6 @@ class RoomsController < ApplicationController
 
   def create
     @room = current_user.rooms.build(room_params)
-    
     if @room.save
       if params[:images]
         params[:images].each do |img|
@@ -27,6 +26,7 @@ class RoomsController < ApplicationController
       @photos = @room.photos
       redirect_to edit_room_path(@room), notice: "Saved..."
     else
+      flash[:alert] = "Please provide all information required."
       render :new
     end
   end
@@ -48,6 +48,7 @@ class RoomsController < ApplicationController
       end
       redirect_to edit_room_path(@room), notice: "Updated..."
     else
+      flash[:alert] = "Please provide all information required."
       render :edit
     end
   end

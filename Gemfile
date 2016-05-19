@@ -28,6 +28,10 @@ gem 'geocoder'
 
 gem 'jquery-ui-rails'
 
+# Real time messaging
+gem 'private_pub'
+gem 'thin'
+
 group :development, :test do
   gem 'byebug'
 end

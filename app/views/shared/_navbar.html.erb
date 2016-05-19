@@ -12,7 +12,7 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-        
+
         <% if(!user_signed_in?) %>
           <li><%= link_to "Log In", new_user_session_path %></li>
           <li><%= link_to "Sign Up", new_user_registration_path %></li>
@@ -21,7 +21,7 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
               <%= image_tag avatar_url(current_user), class: "img-circle avatar-small" %>&nbsp;
               <%= current_user.fullname %> <span class="caret"></span></a>
-            
+
             <ul class="dropdown-menu">
               <li><%= link_to "Your Listings", rooms_path %></li>
               <li><%= link_to "Your Reservations", your_reservations_path %></li>
@@ -33,16 +33,19 @@
               <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
             </ul>
           </li>
-        
+
         <% end %>
-        
+
         <li>
-          <a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i> Messages</a>
+          <%= link_to conversations_path do %>
+            <i class="fa fa-envelope-o" aria-hidden="true"></i> Messages
+          <% end %>
         </li>
         <li>
-          <a href="#"><i class="fa fa-home" aria-hidden="true"></i> Become a Host</a>
+          <%= link_to new_room_path do %>
+            <i class="fa fa-home" aria-hidden="true"></i> Become a Host
+          <% end %>
         </li>
-        
       </ul>
     </div><!--/.nav-collapse -->
   </div>

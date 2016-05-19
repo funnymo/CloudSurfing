@@ -1,6 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "toastr";
+
 body {
   color: #565a5c;
   background-color: #F8F8F8;
@@ -208,4 +209,12 @@ input[type="checkbox"]:checked:before {
   font-size: 20px;
   padding: 10px;
   margin-bottom: 10px;
+}
+
+.conversation {
+  color: #7f7f7f;
+  padding: 10px;
+}
+.conversation:hover, .conversation:focus {
+  background-color: #F4F4F5;
 }
